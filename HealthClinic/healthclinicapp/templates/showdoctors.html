@@ -1,0 +1,35 @@
+{% extends 'base.html' %} {% block title %}Prikaz svih termina{% endblock %} {% block content%}
+
+<div class="table-responsive">
+  <table class="table table-sm table-dark">
+    {% csrf_token %}
+    <tr>
+      <th scope="col">First name</th>
+      <th scope="col">Last name</th>
+      <th scope="col">Specialization</th>
+      <th scope="col">Phone number</th>
+    </tr>
+<!-- For loops for displaying all doctors in the table -->
+{% for i in doctor %}
+    <tr>
+      <td>{{i.DoctorFirstName}}</td>
+      <td>{{i.DoctorLastName}}</td>
+      <td>{{i.DoctorType}}</td>
+      <td>{{i.DoctorPhoneNumber}}</td>
+<!-- Built-in boolean logic for viewing of authorized content, if the user is not logged in, he cannot see options for editing or deletion, only for printing -->
+      {% if user.is_staff %}
+      <td>
+        <a style="color: white;"href="updatedoctor/{{i.id}}">Edit</a>
+      </td>
+      <td>
+        <a style="color: white;" href="deletedoctor/{{i.id}}">Delete</a>
+      </td>
+      {% endif %}
+      <td>
+        <a onclick="window.print();"target = _blank" style="cursor:pointer; text-decoration: underline; color:white;">Print</a>
+      </td>
+    </tr>
+{% endfor %}
+  </table>
+</div>
+{% endblock %}

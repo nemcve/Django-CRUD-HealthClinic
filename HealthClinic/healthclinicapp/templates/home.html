@@ -1,0 +1,21 @@
+{% extends 'base.html' %} {% block content %} {% if user.is_authenticated %}
+<h3 style="background-color: rgb(65, 65, 126); padding: 3px; color: white">
+  <b> Welcome, {{ user.username }}!</b>
+</h3>
+{% else %}
+<center>
+  <h3 style="background-color: rgb(65, 65, 126); padding: 3px; color: white">
+    <b>Welcome to our homepage!</b>
+  </h3>
+</center>
+{% endif %} {% for message in messages %}
+<p style="background-color: green; color: white">{{ message }}</p>
+{% endfor %}
+<center>
+  <p style="padding: 10px; font-size: 30px">
+    As a leading community clinic, this medical clinic has devoted nearly
+    five decades to providing quality care to individuals, families and
+    communities with compassion and dignity.
+  </p>
+</center>
+{% endblock %}

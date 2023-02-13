@@ -1,0 +1,59 @@
+{% extends 'base.html' %} {% block title %}Scheduled appointments{% endblock %} {% block content%}
+
+<div class="table-responsive">
+  <table class="table table-sm table-dark">
+    {% csrf_token %}
+    <tr>
+      <th scope="col">Reason</th>
+      <th scope="col">Doctor</th>
+      <th scope="col">Type</th>
+      <th scope="col">Patient</th>
+      <th scope="col">JMBG</th>
+      <th scope="col">Date and time</th>
+    </tr>
+<!-- For loop for displayig all appointments in the table -->
+{% for i in scheduling %}
+    <tr>
+      <td>{{i.ScheduleName}}</td>
+      <td>{{i.ScheduleDoctor}}</td>
+      <td>{{i.ScheduleType}}</td>
+      <td>{{i.SchedulePatient}}</td>
+      <td>{{i.SchedulePatient.PatientJMBG}}</td>
+      <td>{{i.ScheduleDateAndTime}}</td>
+      {% if user.is_staff %}
+      <td>
+        <a style="color: white;"href="update/{{i.id}}">Edit</a>
+      </td>
+      <td>
+        <a style="color: white;" href="delete/{{i.id}}">Delete</a>
+      </td>
+      {% endif %}
+      <td>
+        <a onclick="window.print();"target = _blank" style="cursor:pointer; text-decoration: underline; color:white;">Print</a>
+      </td>
+    </tr>
+{% endfor %}
+{% for n in schedulingloggedout %}
+    <tr>
+        <td>{{n.lScheduleName}}</td>
+        <td>{{n.lScheduleDoctor}}</td>
+        <td>{{n.lScheduleType}}</td>
+        <td>{{n.lPatientFirstName}} {{n.lPatientLastName}}</td>
+        <td>{{n.lPatientJMBG}}</td>
+        <td>{{n.lScheduleDateAndTime}}</td>
+      {% if user.is_staff %}
+      <td>
+        <a style="color: white;" href="loggedoutupdate/{{n.id}}">Edit</a>
+      </td>
+      <td>
+        <a style="color: white;" href="loggedoutdelete/{{n.id}}">Delete</a>
+      </td>
+      {% endif %}
+      <td>
+        <a onclick="window.print();"target = _blank" style="cursor:pointer; text-decoration: underline; color:white;">Print</a>
+      </td>
+    </tr>
+{% endfor %}
+</table>
+</div>
+{% endblock %}

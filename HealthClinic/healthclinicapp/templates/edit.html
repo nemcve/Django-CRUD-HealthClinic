@@ -1,0 +1,48 @@
+{% extends 'base.html' %} {% block content %}
+<form method="POST" action="/update/{{ scheduling.id }}">
+  {% csrf_token %}
+  <table>
+    <tr>
+      <td>
+        <input name="ScheduleName" required value="{{ scheduling.ScheduleName }}" />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input name="ScheduleDoctor" required value="{{ scheduling.ScheduleDoctor }}" />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input
+          name="ScheduleType"
+          required
+          value="{{ scheduling.ScheduleType }}" />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input
+          name="SchedulePatient"
+          required
+          value="{{ scheduling.SchedulePatient }}"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input
+          name="ScheduleDateAndTIme"
+          required
+          value="{{ scheduling.ScheduleDateAndTIme }}"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button type="submit">Submit</button>
+      </td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

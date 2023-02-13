@@ -1,0 +1,40 @@
+{% extends 'base.html' %} {% block content %}
+<form method="POST" action="/updatedoctor/{{ doctor.id }}">
+  {% csrf_token %}
+  <table>
+    <tr>
+      <td>
+        <input name="DoctorFirstName" required value="{{ doctor.DoctorFirstName }}" />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input name="DoctorLastName" required value="{{ doctor.DoctorLastName }}" />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input
+          name="DoctorType"
+          required
+          value="{{ doctor.DoctorType }}"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input
+          name="DoctorPhoneNumber"
+          required
+          value="{{ doctor.DoctorPhoneNumber }}"
+        />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button type="submit">Submit</button>
+      </td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

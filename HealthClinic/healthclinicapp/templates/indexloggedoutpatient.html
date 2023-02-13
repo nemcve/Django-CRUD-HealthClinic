@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Add or edit patient{% endblock %}
+{% block content %}
+{% load crispy_forms_tags %}
+<div class="form-group-row">
+  <div class="col-md-2">
+    <div class="card-body">
+      <form style="width: 500px;" method="post" action="">
+        <h3 style="width: 500px;">Edit patient</h3>
+        {% csrf_token %} {{ form|crispy }}
+        <input
+          class="btn btn-primary mt-3"
+          type="submit"
+          name="Submit"
+          value="Submit"
+        />
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

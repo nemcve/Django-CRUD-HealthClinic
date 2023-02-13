@@ -1,0 +1,36 @@
+{% extends 'base.html' %} {% block content %}
+<!-- Checks if user is logged in -->
+{% if user.is_authenticated %} 
+<h3 style="background-color: blue; padding: 3px"><b>User profile</b></h3>
+<table class="table table-sm table-dark">
+    <tr>
+        <th>First name:</th>
+        <td>{{user.first_name}}</td>
+    </tr>
+    <tr>
+        <th>Last name:</th>
+        <td>{{user.last_name}}</td>        
+    </tr>
+    <tr>
+        <th>Username:</th>
+        <td>{{user.username}}</td>  
+    </tr>
+    <tr>
+        <th>Email:</th>
+        <td>{{user.email}}</td>    
+    </tr>
+    <tr>
+        <th>Last login:</th>
+        <td>{{ user.last_login }}</td>
+    </tr>
+    <tr>
+        <th>Registration date:</th>
+        <td>{{ user.date_joined }}</td>
+    </tr>
+    <tr>
+        <th>JMBG:</th>
+        <td>{{ user.userprofile.JMBG }}</td>
+    </tr>
+</table>
+{% endif %}
+{% endblock %}

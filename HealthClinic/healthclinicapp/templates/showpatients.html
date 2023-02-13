@@ -1,0 +1,58 @@
+{% extends 'base.html' %} {% block title %}Patients{% endblock %} {% block content%}
+
+<div class="table-responsive">
+  <table class="table table-sm table-dark">
+    {% csrf_token %}
+    <tr>
+      <th scope="col">First name</th>
+      <th scope="col">Last name</th>
+      <th scope="col">JMBG</th>
+      <th scope="col">Address</th>
+      <th scope="col">Phone number</th>
+    </tr>
+<!-- For loop for displaying all patients in the table -->
+{% for i in patient %}
+    <tr>
+      <td>{{i.PatientFirstName}}</td>
+      <td>{{i.PatientLastName}}</td>
+      <td>{{i.PatientJMBG}}</td>
+      <td>{{i.PatientAddress}}</td>
+      <td>{{i.PatientPhoneNumber}}</td>
+<!-- Built-in boolean logic for viewing of authorized content, if the user is not logged in, he cannot see options for editing or deletion, only for printing -->
+      {% if user.is_staff %}
+      <td>
+        <a style="color: white;"href="updatepatient/{{i.id}}">Edit</a>
+      </td>
+      <td>
+        <a style="color: white;" href="deletepatient/{{i.id}}">Delete</a>
+      </td>
+      {% endif %}
+      <td>
+        <a onclick="window.print();"target = _blank" style="cursor:pointer; text-decoration: underline; color:white;">Print</a>
+      </td>
+    </tr>
+{% endfor %}
+{% for n in patientloggedout %}
+    <tr>
+      <td>{{n.lPatientFirstName}}</td>
+      <td>{{n.lPatientLastName}}</td>
+      <td>{{n.lPatientJMBG}}</td>
+      <td>{{n.lPatientAddress}}</td>
+      <td>{{n.lPatientPhoneNumber}}</td>
+<!-- Built-in boolean logic for viewing of authorized content, if the user is not logged in, he cannot see options for editing or deletion, only for printing -->
+      {% if user.is_staff %}
+      <td>
+        <a style="color: white;"href="updateloggedoutpatient/{{n.id}}">Edit</a>
+      </td>
+      <td>
+        <a style="color: white;" href="deleteloggedoutpatient/{{n.id}}">Delete</a>
+      </td>
+      {% endif %}
+      <td>
+        <a onclick="window.print();"target = _blank" style="cursor:pointer; text-decoration: underline; color:white;">Print</a>
+      </td>
+    </tr>
+{% endfor %}
+</table>
+</div>
+{% endblock %}
