@@ -1,5 +1,5 @@
 # Django-CRUD-HealthClinic
-With this app, you can fully manage a health clinic website. Made with Python in Django Framework, HTML, CSS and Bootstrap.
+With this app, you can fully manage a health clinic website. Made with Python in Django Framework, SQLite3, HTML, CSS and Bootstrap.
 <h2>Key features:</h2>
 <ul>
   <li>User registration</li>
