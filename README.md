@@ -24,7 +24,7 @@ With this app, you can fully manage a health clinic website. Made with Python in
 </ul>
 To get it running on your local machine, follow the steps below:
 <ol>
-  <li>Run the commands below in your terminal:</li>
+  Run the commands below in your terminal:
   ```
   <li>
     $ git clone https://github.com/nemcve/Django-CRUD-HealthClinic.git
