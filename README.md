@@ -34,7 +34,6 @@ To get it running on your local machine, follow the steps below:
   <li>Open your browser and navigate to http://127.0.0.1:8000/</li>
   <li>Admin login username: admin password: admin</li>
   
-  ```
 </ol>
 If you want to create a new admin user:
 <br>$ python manage.py createsuperuser, and follow the prompts
