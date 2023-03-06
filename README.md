@@ -36,10 +36,16 @@ To get it running on your local machine, run the commands below in your terminal
 ``` 3. $ pip install -r requirements.txt ```
 <br>
 
-``` 4. $ python manage.py runserver ```
+``` 4. $ python manage.py makemigrations ```
 <br>
 
-``` 5. Open your browser and navigate to http://127.0.0.1:8000/ ```
+``` 5. $ python manage.py migrate ```
+<br>
+
+``` 6. $ python manage.py runserver ```
+<br>
+
+``` 7. Open your browser and navigate to http://127.0.0.1:8000/ ```
 <br>
 
 ``` Admin login username: admin, password: admin ```
