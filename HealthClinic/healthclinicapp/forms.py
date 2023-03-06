@@ -31,7 +31,7 @@ class SchedulingLoggedoutForm(forms.ModelForm):
             "lPatientAddress": "Address",
             "lPatientPhoneNumber": "Phone number",
             "lScheduleName": "Scheduling reason ",
-            "lScheduleType": "Scheduling type ",
+            "lScheduleType": "Type of service ",
             "lScheduleDoctor": "Doctor ",
             "lScheduleDateAndTime": "Date and time (month/day/year hour:minutes) ",
         }
