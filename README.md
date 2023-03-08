@@ -1,5 +1,5 @@
 # Django-CRUD-HealthClinic
-With this app, you can fully manage a health clinic website. Made with Python in Django Framework, PostgreSQL using AWS RDS, HTML, CSS and Bootstrap. App was successfully deployed to AWS EC2 instance.
+With this app, you can fully manage a health clinic website. Made with Python in the Django Framework, SQLite3, PostgreSQL using AWS RDS, HTML, CSS, and Bootstrap. The application was successfully deployed to the AWS EC2 instance and is production-ready.
 
 <h2>Key features :</h2>
 <ul>
@@ -34,10 +34,19 @@ To get it running on your local machine, run the commands below in your terminal
 ``` 2. $ cd Django-CRUD-HealthClinic ```
 <br>
 
-``` 3. $ docker-compose up --build ```
+``` 3. Generate a secret key using https://djecrety.ir, copy it, and replace it with the existing SECRET_KEY setting in the settings.py file. Then set the DEBUG setting underneath it to True. ```
 <br>
 
-``` 4. Open your browser and navigate to http://127.0.0.1:8000/ ```
+```4. Also in the settings.py file, uncomment the db.sqlite3 database connection and delete or comment out the PostgreSQL database connection. ```
+<br>
+
+``` 5. $ docker build -t djangoapp . ```
+<br>
+
+``` 6. $ docker run -p 8000:8000 djangoapp ```
+<br>
+
+``` 7. Open your browser and navigate to http://127.0.0.1:8000/ ```
 <br>
 
 ``` Admin login username: admin, password: admin ```
