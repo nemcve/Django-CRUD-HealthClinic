@@ -30,28 +30,25 @@ To get it running on your local machine, run the commands below in your terminal
 ``` 1. $ git clone https://github.com/nemcve/Django-CRUD-HealthClinic.git ``` 
 <br> 
 
-``` 2. $ cd Django-CRUD-HealthClinic/HealthClinic ```
+``` 2. $ cd Django-CRUD-HealthClinic ```
 <br>
 
-``` 3. $ pip install -r requirements.txt ```
+``` 3. $ docker build -t djangoapp ```
 <br>
 
-``` 4. $ python manage.py makemigrations ```
+``` 4. $ docker run -p 8000:8000 djangoapp ```
 <br>
 
-``` 5. $ python manage.py migrate ```
-<br>
-
-``` 6. $ python manage.py runserver ```
-<br>
-
-``` 7. Open your browser and navigate to http://127.0.0.1:8000/ ```
+``` 5. Open your browser and navigate to http://127.0.0.1:8000/ ```
 <br>
 
 ``` Admin login username: admin, password: admin ```
 <br>
 <br>
 If you want to create a new admin user :
+
+```$ cd Django-CRUD-HealthClinic/HealthClinic/
+<br>
 
 ```$ python manage.py createsuperuser, and follow the prompts```
 <br>
