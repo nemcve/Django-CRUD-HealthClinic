@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 django
 django-crispy-forms
 crispy-bootstrap5
 python-decouple
 psycopg2-binary
+=======
+accounts==0.2.4
+Django==4.0.2
+>>>>>>> 7a726d79f875560f3ba843f0e750f58ce9b664b4

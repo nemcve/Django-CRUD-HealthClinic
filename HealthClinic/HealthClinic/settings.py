@@ -87,12 +87,21 @@ WSGI_APPLICATION = 'HealthClinic.wsgi.application'
 
 DATABASES = {
     'default': {
+<<<<<<< HEAD
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': config('NAME'),
         'USER': config('USER'),
         'PASSWORD': config('PASSWORD'),
         'HOST': 'database-1.czix73bk9dsb.us-east-1.rds.amazonaws.com',
         'PORT': 5432,
+=======
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'db',
+        'USER': 'postgres',
+        'PASSWORD': 'admin',
+        'HOST': 'localhost',
+        'PORT': '5432'
+>>>>>>> 7a726d79f875560f3ba843f0e750f58ce9b664b4
     }
 }
 
@@ -140,5 +149,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+<<<<<<< HEAD
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+=======
+>>>>>>> 7a726d79f875560f3ba843f0e750f58ce9b664b4
