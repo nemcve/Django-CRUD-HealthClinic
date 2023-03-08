@@ -1,5 +1,5 @@
 # Django-CRUD-HealthClinic
-With this app, you can fully manage a health clinic website. Made with Python in the Django Framework, SQLite3, PostgreSQL using AWS RDS, HTML, CSS, and Bootstrap. The application was successfully deployed to the AWS EC2 instance and is production-ready.
+With this app, you can fully manage a health clinic website. Made with Python in the Django Framework, PostgreSQL using AWS RDS, HTML, CSS, and Bootstrap. Containerized using Docker and Docker compose. The application was successfully deployed to the AWS EC2 instance.
 
 <h2>Key features :</h2>
 <ul>
