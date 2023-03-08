@@ -47,10 +47,10 @@ To get it running on your local machine, run the commands below in your terminal
 <br>
 If you want to create a new admin user :
 
-```$ cd Django-CRUD-HealthClinic/HealthClinic/
+``` $ cd Django-CRUD-HealthClinic/HealthClinic/ ```
 <br>
 
-```$ python manage.py createsuperuser, and follow the prompts```
+``` $ python manage.py createsuperuser, and follow the prompts ```
 <br>
 
 To access the Django admin control panel and manage users and user groups, in your browser's url field, add /admin. Like this :
