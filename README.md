@@ -60,4 +60,4 @@ To access the Django admin control panel and manage users and user groups, in yo
 
 ``` https://127.0.0.1:8000/admin ```
 
-Read full documentation here : https://www.scribd.com/document/580412719/Web-aplikacija-lekarske-ordinacije-Informacioni-Sistemi-2-Seminarski-Rad-Nemanja-Cvejić-IT63-18#
+
