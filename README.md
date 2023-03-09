@@ -64,5 +64,5 @@ To access the Django admin control panel and manage users and user groups, in yo
 
 ``` https://127.0.0.1:8000/admin ```
 
-<h3>Application succesfully running at AWS EC2 instance :</h3>
+<h3>Application successfully running on an AWS EC2 instance :</h3>
 <img src="./images/snip.png">
